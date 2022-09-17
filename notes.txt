@@ -1,0 +1,51 @@
+Webpack => bundle all the JS/CSS files + React Libs => inject all of these files into the index.html 
+
+
+How to use bootstrap in react? 
+=> install bootstrap 'npm i bootstrap'
+=> import bootstrap.css code in entry file => index.js
+
+
+-------------------
+React Life Cycle:
+Each component go through three phases :
+1- Mounting => creation.
+2- Updating => update i.e: state/ props.
+3- Unmounting => destroying.
+
+
+ - ------------------------  Mouting Phase ------------------------ -
+
+ 1- constructor() ===> intialize the states/props
+ 2- render() ===>  jsx => virtual dom create
+ 3- componentDidMount() ===> a good place for call backend server / start socket connection with a server.
+
+- ------------------------  Updating Phase ------------------------ -
+ 1- render() ===>  jsx => virtual dom create
+ 2- componentDidUpdate() ===>  watch the previous states/props to compare them with the new states/props so you may need to call a backend as a result.
+
+
+- ------------------------  Unmounting Phase ------------------------ -
+1- componentWillUnmount() ====> close all the open socket connections / clear the timers. 
+
+
+
+
+--------------------------------------------------------------------------------
+
+Class Component
+
+Functional Component 
+pros : VERY simple
+cons : 1- stateless
+       2- lacks the life cycle hooks
+
+solution : use React Hooks(v16.8)
+
+
+still we use Class component for view cases .. i.e ErrorBoundary =>Class Component (such as try-catch in JS)
+
+
+React Hooks: 
+1- useState() => to solve stateless.
+2- useEffect() => to solve life cycle hooks.
